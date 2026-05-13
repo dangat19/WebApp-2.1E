@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover { background-color: #555; }
+    nav a.active { background-color: #4CAF50; }
+
+    .page-header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 30px 40px;
+    }
+    .page-header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .card {
+      background-color: white;
+      max-width: 480px;
+      margin: 50px auto;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      color: #1a1a2e;
+      margin: 0 0 5px;
+      font-size: 22px;
+    }
+
+    .subtitle {
+      color: #6b7280;
+      font-size: 14px;
+      margin: 0 0 1.5rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #374151;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      padding: 9px 12px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #111827;
+      font-family: Arial, sans-serif;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="tel"]:focus {
+      border-color: #4f46e5;
+    }
+
+    /* Password strength bar */
+    .strength-bar {
+      height: 4px;
+      border-radius: 4px;
+      background: #e5e7eb;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+    .strength-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 4px;
+      transition: width 0.3s, background 0.3s;
+    }
+    .strength-label {
+      font-size: 11px;
+      margin-top: 3px;
+      color: #9ca3af;
+    }
+
+    .terms {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+    .terms a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+    .terms a:hover { text-decoration: underline; }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 11px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover { background-color: #4338ca; }
+
+    .divider {
+      text-align: center;
+      margin: 1.2rem 0;
+      font-size: 13px;
+      color: #9ca3af;
+      position: relative;
+    }
+    .divider::before,
+    .divider::after {
+      content: '';
+      display: inline-block;
+      width: 38%;
+      height: 1px;
+      background: #e5e7eb;
+      vertical-align: middle;
+      margin: 0 8px;
+    }
+
+    .signin-link {
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 1rem;
+    }
+    .signin-link a {
+      color: #4f46e5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .signin-link a:hover { text-decoration: underline; }
+
+    @media (max-width: 500px) {
+      .form-row { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html" class="active">Sign Up</a>
+  </nav>
+
+  <div class="page-header">
+    <h1>SIGN UP</h1>
+  </div>
+
+  <div class="card">
+    <h2>Create an account</h2>
+    <p class="subtitle">Fill in the details below to get started.</p>
+
+    <form action="#" method="post">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="e.g. Jane">
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="e.g. Doe">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="e.g. jane@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. +254 700 000000">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" oninput="checkStrength(this.value)">
+        <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+        <div class="strength-label" id="strength-label">Enter a password</div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Repeat your password">
+      </div>
+
+      <p class="terms">
+        By signing up, you agree to our
+        <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+      </p>
+
+      <input type="submit" value="Create account">
+
+    </form>
+
+    <div class="divider">or</div>
+
+    <div class="signin-link">
+      Already have an account? <a href="signin.html">Sign in</a>
+    </div>
+
+  </div>
+
+  <script>
+    function checkStrength(password) {
+      const fill = document.getElementById('strength-fill');
+      const label = document.getElementById('strength-label');
+
+      let strength = 0;
+      if (password.length >= 8) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/[0-9]/.test(password)) strength++;
+      if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+      const levels = [
+        { width: '0%',   color: '#e5e7eb', text: 'Enter a password' },
+        { width: '25%',  color: '#ef4444', text: 'Weak' },
+        { width: '50%',  color: '#f97316', text: 'Fair' },
+        { width: '75%',  color: '#eab308', text: 'Good' },
+        { width: '100%', color: '#22c55e', text: 'Strong' },
+      ];
+
+      const level = password.length === 0 ? levels[0] : levels[strength];
+      fill.style.width = level.width;
+      fill.style.background = level.color;
+      label.style.color = level.color;
+      label.textContent = level.text;
+    }
+  </script>
+
+</body>
+</html>

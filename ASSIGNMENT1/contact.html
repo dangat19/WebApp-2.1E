@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us</title>
+  <title>Contact Form</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #ffffff; color: #333; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      font-family: Arial, sans-serif;
+    }
 
     nav {
       background-color: #333;
@@ -23,35 +27,227 @@
     nav a:hover { background-color: #555; }
     nav a.active { background-color: #4CAF50; }
 
-    .content {
-      padding: 40px;
-      max-width: 800px;
-      margin: 0 auto;
+    /* Page title banner */
+    .page-header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 30px 40px;
     }
-    h1 { font-size: 28px; margin-bottom: 12px; color: #222; }
-    p  { font-size: 15px; line-height: 1.7; color: #555; }
-</style>
+    .page-header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    /* Two-column layout wrapper */
+    .content-row {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Shared card style */
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .card h2 {
+      color: #1a1a2e;
+      font-size: 20px;
+      margin: 0 0 5px;
+    }
+
+    .subtitle {
+      color: #6b7280;
+      font-size: 14px;
+      margin: 0 0 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* Form styles */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #374151;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      padding: 9px 12px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #111827;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+      border-color: #4f46e5;
+    }
+
+    textarea { resize: vertical; }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 11px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    input[type="submit"]:hover { background-color: #4338ca; }
+
+    /* Office card styles */
+    .office-block {
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .office-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .office-block h3 {
+      font-size: 15px;
+      color: #4f46e5;
+      margin: 0 0 10px;
+    }
+
+    .office-block p {
+      font-size: 13px;
+      color: #374151;
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    .office-block p span {
+      font-weight: bold;
+      color: #1a1a2e;
+    }
+
+    .office-block a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .office-block a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 650px) {
+      .content-row { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <a href="index2.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html" class="active">Contact Us</a>
-</nav>
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="signin.html" class="active">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
 
-<div class="content">
-  <h1>Contact Us</h1>
-  <p>If you have any questions or inquiries, please feel free to reach out to us through the following contact information:.</p>
-  <ul>
-        <li>Email: <a href="mailto:muriithi@icse.com">muriithi@icse.com</a></li>
-        <li>Phone: <a href="tel:+254 757572814">+254 757572814</a></li>
-        <li>Address: 254 Main Street, Nairobi, Kenya</li>
-    </ul>
-</div>
+
+  <div class="page-header">
+    <h1>CONTACT US</h1>
+  </div>
+
+  <div class="content-row">
+
+    <!-- LEFT: Contact Form -->
+    <div class="card">
+      <h2>Send a Message</h2>
+      <p class="subtitle">We'll get back to you as soon as possible.</p>
+
+      <form action="#" method="post">
+
+        <div class="form-group">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="e.g. jane@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. +254 700 000000">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <input type="submit" value="Send message">
+
+      </form>
+    </div>
+
+    <!-- RIGHT: Our Offices -->
+    <div class="card">
+      <h2>Our Offices</h2>
+      <p class="subtitle">
+        We have offices in multiple locations. Please visit our website
+        for updated information on locations and hours of operation.
+      </p>
+
+      <div class="office-block">
+        <h3>Head Office</h3>
+        <p><span>Address:</span> 123 Main Street, Nairobi, Kenya</p>
+        <p><span>Phone:</span> +254 700 000 000</p>
+        <p><span>Email:</span> <a href="mailto:headoffice@company.com">headoffice@company.com</a></p>
+      </div>
+
+      <div class="office-block">
+        <h3>Business Office</h3>
+        <p><span>Address:</span> 456 Main Street, Mombasa, Kenya</p>
+        <p><span>Phone:</span> +254 700 000 001</p>
+        <p><span>Email:</span> <a href="mailto:business@company.com">business@company.com</a></p>
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
